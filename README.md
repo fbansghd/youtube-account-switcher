@@ -121,10 +121,6 @@ youtube-account-switcher/
 ├── package.json            # npm設定
 ├── vite.config.js          # Viteビルド設定
 ├── src/
-│   ├── content/            # コンテンツスクリプト
-│   │   ├── content.jsx
-│   │   ├── AccountSwitcher.jsx
-│   │   └── AccountSwitcher.module.scss
 │   └── popup/              # ポップアップ画面
 │       ├── popup.html
 │       ├── Popup.jsx
