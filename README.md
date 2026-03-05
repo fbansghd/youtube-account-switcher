@@ -29,12 +29,12 @@ YouTube視聴目的別アカウント自動切り替え拡張機能
 
 ### アカウントの対応表
 
-| 目的 | アカウント番号 | 推奨用途 |
+| 目的 | アカウント順序 | 推奨用途 |
 |------|---------------|---------|
-| 👤 デフォルト | アカウント1 (0) | メインアカウント |
-| 📚 学習 | アカウント2 (1) | プログラミング、チュートリアル |
-| 🎮 遊び | アカウント3 (2) | ゲーム実況、エンタメ |
-| 🎵 音楽 | アカウント4 (3) | ミュージックビデオ、ライブ |
+| 👤 デフォルト | 1番目 | メインアカウント |
+| 📚 学習 | 2番目 | プログラミング、チュートリアル |
+| 🎮 遊び | 3番目 | ゲーム実況、エンタメ動画 |
+| 🎵 音楽 | 4番目 | ミュージックビデオ、ライブ |
 
 ## 🚀 インストール方法
 
@@ -148,6 +148,15 @@ youtube-account-switcher/
 
 ### ビルドエラー
 
+**Windows:**
+```cmd
+# キャッシュをクリアして再ビルド
+rmdir /s /q node_modules dist
+npm install
+npm run build
+```
+
+**Mac/Linux:**
 ```bash
 # キャッシュをクリアして再ビルド
 rm -rf node_modules dist
@@ -181,7 +190,16 @@ A: `npm run dev` でホットリロード可能です。
 ```bash
 # 本番ビルド
 npm run build
+```
 
+**Windows (PowerShell):**
+```powershell
+# distフォルダをzipに圧縮（Chrome Web Store公開用）
+Compress-Archive -Path dist\* -DestinationPath youtube-account-switcher.zip -Force
+```
+
+**Mac/Linux:**
+```bash
 # distフォルダをzipに圧縮（Chrome Web Store公開用）
 cd dist
 zip -r ../youtube-account-switcher.zip .
